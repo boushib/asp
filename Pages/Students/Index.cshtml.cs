@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using StudentsManagement.Data;
 using StudentsManagement.Models;
 
-namespace web_app.PagesStudents
+namespace web_app.Pages_Students
 {
     public class IndexModel : PageModel
     {

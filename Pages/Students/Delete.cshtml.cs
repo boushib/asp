@@ -4,18 +4,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using StudentsManagement.Data;
 using StudentsManagement.Models;
 
-namespace web_app.PagesStudents
+namespace web_app.Pages_Students
 {
-    public class EditModel : PageModel
+    public class DeleteModel : PageModel
     {
         private readonly StudentsManagement.Data.StudentsManagementContext _context;
 
-        public EditModel(StudentsManagement.Data.StudentsManagementContext context)
+        public DeleteModel(StudentsManagement.Data.StudentsManagementContext context)
         {
             _context = context;
         }
@@ -39,39 +38,22 @@ namespace web_app.PagesStudents
             return Page();
         }
 
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (!ModelState.IsValid)
+            if (id == null)
             {
-                return Page();
+                return NotFound();
             }
 
-            _context.Attach(Student).State = EntityState.Modified;
+            Student = await _context.Student.FindAsync(id);
 
-            try
+            if (Student != null)
             {
+                _context.Student.Remove(Student);
                 await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!StudentExists(Student.Code))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
             }
 
             return RedirectToPage("./Index");
-        }
-
-        private bool StudentExists(int id)
-        {
-            return _context.Student.Any(e => e.Code == id);
         }
     }
 }
