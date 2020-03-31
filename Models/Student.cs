@@ -5,6 +5,7 @@ namespace StudentsManagement.Models
 {
   public class Student
   {
+    [Key]
     public int Code {get; set;}
     public string FirstName {get; set;}
     public string LastName {get; set;}

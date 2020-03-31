@@ -20536,8 +20536,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\boush\\Desktop\\workshop\\dotnet\\web-app\\PagesStudents\\Edit.cshtml",
+      "TargetPath": "PagesStudents\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\boush\\Desktop\\workshop\\dotnet\\web-app\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\boush\\Desktop\\workshop\\dotnet\\web-app\\PagesStudents\\Details.cshtml",
+      "TargetPath": "PagesStudents\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20558,6 +20568,21 @@
     {
       "FilePath": "c:\\Users\\boush\\Desktop\\workshop\\dotnet\\web-app\\Pages\\Error.cshtml",
       "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\boush\\Desktop\\workshop\\dotnet\\web-app\\PagesStudents\\Index.cshtml",
+      "TargetPath": "PagesStudents\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\boush\\Desktop\\workshop\\dotnet\\web-app\\PagesStudents\\Delete.cshtml",
+      "TargetPath": "PagesStudents\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\boush\\Desktop\\workshop\\dotnet\\web-app\\PagesStudents\\Create.cshtml",
+      "TargetPath": "PagesStudents\\Create.cshtml",
       "FileKind": "mvc"
     }
   ],
