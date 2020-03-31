@@ -20546,6 +20546,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\boush\\Desktop\\workshop\\dotnet\\web-app\\wwwroot\\_AppStart.cshtml",
+      "TargetPath": "wwwroot\\_AppStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\boush\\Desktop\\workshop\\dotnet\\web-app\\Pages\\Index.cshtml",
       "TargetPath": "Pages\\Index.cshtml",
       "FileKind": "mvc"

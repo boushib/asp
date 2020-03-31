@@ -1,27 +1,42 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home";
 }
 
-  <div class="box">
-    <h2>Add/Update/Delete Student</h2>
-    <form action="">
-      <div class="form-control">
-        <label for="code">Code</label>
-        <input type="text" placeholder="Enter Student Code" id="code">
-      </div>
-      <div class="form-control">
-        <label for="firstName">First Name</label>
-        <input type="text" placeholder="Enter Student First Name" id="firstName">
-      </div>
-      <div class="form-control">
-        <label for="lastName">Last Name</label>
-        <input type="text" placeholder="Enter Student Last Name" id="lastName">
-      </div>
-      <div class="form-control">
-        <label for="grade">Grade</label>
-        <input type="text" placeholder="Enter Student Grade" id="grade">
-      </div>
-    </form>
-  </div>
+<div class="box">
+  @{
+    if (ViewContext.HttpContext.Request.Method == "POST")
+    {
+      @* string firstName = Request["firstName"];
+      string lasttName = Request["lasttName"];
+      string studentName = $"{firstName} {lastName}";
+      <p>Student name: @studentName = </p>
+      <p>Student name: @studentName</p> *@
+      <p>POST</p>
+    } 
+    else 
+    {
+      <h2>Add/Update/Delete Student</h2>
+      <form method="post" action="">
+        <div class="form-control">
+          <label for="code">Code</label>
+          <input type="text" placeholder="Enter Student Code" id="code" name="code">
+        </div>
+        <div class="form-control">
+          <label for="firstName">First Name</label>
+          <input type="text" placeholder="Enter Student First Name" id="firstName" name="firstName">
+        </div>
+        <div class="form-control">
+          <label for="lastName">Last Name</label>
+          <input type="text" placeholder="Enter Student Last Name" id="lastName" name="lastName">
+        </div>
+        <div class="form-control">
+          <label for="grade">Grade</label>
+          <input type="text" placeholder="Enter Student Grade" id="grade" name="grade">
+        </div>
+        <button class="btn" type="submit">Add</button>
+      </form>
+    }
+  }
+</div>

@@ -49,3 +49,13 @@ label {
   margin-bottom: 8px;
   color: rgba(255, 255, 255, .6);
 }
+
+.btn {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #8BC34A;
+  min-width: 80px;
+  cursor: pointer;
+}
